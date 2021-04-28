@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {},
               ),
               IconButton(
-                icon: Icon(Icons.favorite),
+                icon: Icon(Icons.favorite_outline),
                 onPressed: () {},
               ),
               IconButton(

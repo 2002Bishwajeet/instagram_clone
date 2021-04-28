@@ -70,7 +70,7 @@ List<Post> dummydata = [
   Post(
       image: 'assets/images/hrk.jpg',
       title: 'Just Hera Pheri Stuffs',
-      userid: 'biswa20p',
+      userid: 'hrithik21',
       postimg: 'assets/images/post2.jpg',
       userliked: '150',
       comments: '100'),

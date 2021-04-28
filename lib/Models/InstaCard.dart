@@ -33,7 +33,9 @@ class _InstaCardState extends State<InstaCard> {
               Text(this.widget.post.userid,
                   style: TextStyle(fontWeight: FontWeight.bold)),
               Spacer(),
-              IconButton(icon: Icon(Icons.more_horiz), onPressed: () {})
+              IconButton(
+                splashRadius: 2,
+                icon: Icon(Icons.more_horiz), onPressed: () {})
             ],
           ),
           Container(
@@ -50,6 +52,7 @@ class _InstaCardState extends State<InstaCard> {
               Row(
                 children: [
                   IconButton(
+                    splashRadius: 2,
                       icon: toggle
                           ? Icon(CupertinoIcons.heart)
                           : Icon(
@@ -66,10 +69,14 @@ class _InstaCardState extends State<InstaCard> {
                         });
                       }),
                   IconButton(
+                    splashRadius: 2,
                       icon: Icon(Icons.comment_outlined), onPressed: () {}),
-                  IconButton(icon: Icon(MaterialIcons.send), onPressed: () {}),
+                  IconButton(
+                    splashRadius: 2,
+                    icon: Icon(MaterialIcons.send), onPressed: () {}),
                   Spacer(),
                   IconButton(
+                    splashRadius: 2,
                       icon: Icon(Icons.bookmark_border), onPressed: () {}),
                 ],
               ),

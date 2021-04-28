@@ -102,11 +102,73 @@ List<Post> dummydata = [
       postimg: 'assets/images/post6.png',
       userliked: 600,
       comments: '100'),
-        Post(
+  Post(
       image: 'assets/images/bruce.jpg',
       title: 'Just RELAX',
       userid: 'hulky',
       postimg: 'assets/images/post7.jpg',
       userliked: 1200,
       comments: '300'),
+];
+
+class Chatdata {
+  final String id;
+  final String msg;
+  final String img;
+
+  Chatdata({this.id, this.msg, this.img});
+}
+
+List<Chatdata> chaadata = [
+  Chatdata(
+  id: "Gauri Gupta",
+  msg: "Aur Biswa kya haal chaal",
+  img: "assets/images/dp1.jpg",
+),
+ Chatdata(
+  id: "Aditya Kashyap",
+  msg: "Aaj Shaam 5 bje Vegas",
+  img: "assets/images/dp2.JPG",
+),
+ Chatdata(
+  id: "Tanya",
+  msg: "God of High School Dekh",
+  img: "assets/images/dp3.jpg",
+),
+ Chatdata(
+  id: "Hanuman",
+  msg: "Jai Shree Ram",
+  img: "assets/images/dp4.jpg",
+),
+ Chatdata(
+  id: "Gunjan",
+  msg: "Yaar C++ install karwade 😥",
+  img: "assets/images/dp5.jpg",
+),
+ Chatdata(
+  id: "Aayan Ahmed",
+  msg: "Mai na la rha biryani school mein",
+  img: "assets/images/dp6.jpg",
+),
+ Chatdata(
+  id: "Sarthak Gaur",
+  msg: "Tam to bade heavy coder nikle",
+  img: "assets/images/dp7.jpg",
+),
+ Chatdata(
+  id: "Deepanshu Yadav",
+  msg: "Bhai Viva mein help kar dio",
+  img: "assets/images/dp8.jpg",
+),
+ Chatdata(
+  id: "Naman Vyas",
+  msg: "Meme Bana Doonga",
+  img: "assets/images/dp9.jpg",
+),
+ Chatdata(
+  id: "Scarlett Johnson",
+  msg: "Love you<3000 ♥",
+  img: "assets/images/scar.jpg",
+),
+
 ];

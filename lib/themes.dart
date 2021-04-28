@@ -2,6 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+const bgStoryColors = [
+  const Color(0xFF151372),
+  const Color(0xFF107197),
+  const Color(0xFF194D88),
+  const Color(0xFF08BAC7),
+  const Color(0xFF000A33),
+
+];
+final Shader linearGradient = LinearGradient(
+  colors: <Color>[ const Color(0xFFA30606),
+  const Color(0xFF721099),
+  const Color(0xFF961F29),
+  const Color(0xFFDA7B0E),
+  const Color(0xFF962173),],
+).createShader(Rect.fromLTWH(0.0, 0.0, 200.0, 70.0));
 class Mytheme {
   static ThemeData lightTheme(BuildContext context) => ThemeData(
       primaryColor: Colors
@@ -13,6 +28,7 @@ class Mytheme {
       buttonColor: Colors.pink.shade200,
       cardColor: Vx.white,
       canvasColor: creamcolor,
+      
       backgroundColor: Color(0xfff8faf8),
       accentColor: Colors.pink.shade200,
       appBarTheme: AppBarTheme(
@@ -50,5 +66,6 @@ class Mytheme {
   static Color lightBluishcolor = Vx.indigo800;
   static Color darkCreamcolor = Vx.gray900;
   static Color bgColor = Color(0xfff8faf8);
+  
   
 }

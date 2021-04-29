@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:instagram_clone/Models/Insta_home_model.dart';
+import 'package:instagram_clone/pages/Profile.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'Chat_Page.dart';
-
-
 
 class HomePage extends StatefulWidget {
   @override
@@ -19,11 +18,10 @@ class _HomePageState extends State<HomePage> {
       initialPage: 0,
     );
     return PageView(
-      
       controller: controller,
       children: [
         Homepage(controller: controller),
-        ChatPage(controller: controller,),
+        ChatPage(controller: controller),
       ],
     );
   }
@@ -103,10 +101,14 @@ class Homepage extends StatelessWidget {
                 onPressed: () {},
               ),
               IconButton(
-                splashRadius: 2,
-                icon: Icon(Icons.person),
-                onPressed: () {},
-              ),
+                  splashRadius: 2,
+                  icon: Icon(Icons.person),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return ProfilePage();
+                    }));
+                  }),
             ],
           ),
         ),

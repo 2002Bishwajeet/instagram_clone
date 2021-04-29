@@ -35,7 +35,7 @@ class _ChatPageState extends State<ChatPage>
           icon: Icon(Icons.arrow_back),
           onPressed: () {
             if (widget.controller.hasClients) { //statefull mein widget. lagana zaroori pad jaata hai
-                      widget.controller.previousPage(
+                      widget.controller.animateToPage(0,
                           duration: Duration(milliseconds: 400),
                           curve: Curves.easeInOut);
                     }

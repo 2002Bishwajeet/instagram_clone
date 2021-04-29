@@ -27,6 +27,8 @@ dependencies:
   flutter_icons: ^1.1.0
   font_awesome: ^5.10.1
   google_fonts: ^2.0.0
+  persistent_bottom_nav_bar: ^4.0.2
+  url_launcher: ^6.0.3
   velocity_x: ^3.0.0
 
 dev_dependencies:

@@ -58,6 +58,42 @@ List<User> dumdata = [
     image: 'assets/images/bruce.jpg',
   ),
 ];
+class ProfileStory {
+  String userid;
+  String image;
+
+  ProfileStory({
+    @required this.userid,
+    @required this.image,
+  });
+}
+List<ProfileStory> profiledata2 = [
+  ProfileStory(
+    userid: 'App Dev',
+    image: 'assets/images/sp1.png',
+  ),
+  ProfileStory(
+    userid: 'FoodY',
+    image: 'assets/images/sp2.jpg',
+  ),
+  ProfileStory(
+    userid: 'Farwell',
+    image: 'assets/images/sp3.jpg',
+  ),
+  ProfileStory(
+    userid: 'Man a li',
+    image: 'assets/images/sp4.jpg',
+  ),
+  ProfileStory(
+    userid: 'Jai mata Di',
+    image: 'assets/images/sp5.jpg',
+  ),
+  ProfileStory(
+    userid: 'Amritsar',
+    image: 'assets/images/sp6.jpg',
+  ),
+  
+];
 
 List<Post> dummydata = [
   Post(
@@ -121,54 +157,86 @@ class Chatdata {
 
 List<Chatdata> chaadata = [
   Chatdata(
-  id: "Gauri Gupta",
-  msg: "Aur Biswa kya haal chaal",
-  img: "assets/images/dp1.jpg",
-),
- Chatdata(
-  id: "Aditya Kashyap",
-  msg: "Aaj Shaam 5 bje Vegas",
-  img: "assets/images/dp2.JPG",
-),
- Chatdata(
-  id: "Tanya",
-  msg: "God of High School Dekh",
-  img: "assets/images/dp3.jpg",
-),
- Chatdata(
-  id: "Hanuman",
-  msg: "Jai Shree Ram",
-  img: "assets/images/dp4.jpg",
-),
- Chatdata(
-  id: "Gunjan",
-  msg: "Yaar C++ install karwade 😥",
-  img: "assets/images/dp5.jpg",
-),
- Chatdata(
-  id: "Aayan Ahmed",
-  msg: "Mai na la rha biryani school mein",
-  img: "assets/images/dp6.jpg",
-),
- Chatdata(
-  id: "Sarthak Gaur",
-  msg: "Tam to bade heavy coder nikle",
-  img: "assets/images/dp7.jpg",
-),
- Chatdata(
-  id: "Deepanshu Yadav",
-  msg: "Bhai Viva mein help kar dio",
-  img: "assets/images/dp8.jpg",
-),
- Chatdata(
-  id: "Naman Vyas",
-  msg: "Meme Bana Doonga",
-  img: "assets/images/dp9.jpg",
-),
- Chatdata(
-  id: "Scarlett Johnson",
-  msg: "Love you<3000 ♥",
-  img: "assets/images/scar.jpg",
-),
+    id: "Gauri Gupta",
+    msg: "Aur Biswa kya haal chaal",
+    img: "assets/images/dp1.jpg",
+  ),
+  Chatdata(
+    id: "Aditya Kashyap",
+    msg: "Aaj Shaam 5 bje Vegas",
+    img: "assets/images/dp2.JPG",
+  ),
+  Chatdata(
+    id: "Tanya",
+    msg: "God of High School Dekh",
+    img: "assets/images/dp3.jpg",
+  ),
+  Chatdata(
+    id: "Hanuman",
+    msg: "Jai Shree Ram",
+    img: "assets/images/dp4.jpg",
+  ),
+  Chatdata(
+    id: "Gunjan",
+    msg: "Yaar C++ install karwade 😥",
+    img: "assets/images/dp5.jpg",
+  ),
+  Chatdata(
+    id: "Aayan Ahmed",
+    msg: "Mai na la rha biryani school mein",
+    img: "assets/images/dp6.jpg",
+  ),
+  Chatdata(
+    id: "Sarthak Gaur",
+    msg: "Tam to bade heavy coder nikle",
+    img: "assets/images/dp7.jpg",
+  ),
+  Chatdata(
+    id: "Deepanshu Yadav",
+    msg: "Bhai Viva mein help kar dio",
+    img: "assets/images/dp8.jpg",
+  ),
+  Chatdata(
+    id: "Naman Vyas",
+    msg: "Meme Bana Doonga",
+    img: "assets/images/dp9.jpg",
+  ),
+  Chatdata(
+    id: "Scarlett Johnson",
+    msg: "Love you<3000 ♥",
+    img: "assets/images/scar.jpg",
+  ),
+  Chatdata(
+    id: "Aryan Sethi",
+    msg: "Bobu 💘",
+    img: "assets/images/aryan.jpg",
+  ),
+  Chatdata(
+    id: "Chirag",
+    msg: "Chuski Pyar hai Humara",
+    img: "assets/images/chuski.jpg",
+  ),
+];
 
+class Name {
+  String name;
+  String post;
+  String followers;
+  String following;
+  String bio;
+  String link;
+
+  Name({this.name, this.post, this.followers, this.following, this.bio,this.link});
+}
+
+List<Name> profiledata = [
+  Name(
+    name: "Bishwajeet Parhi",
+    post: "120",
+    followers: "393",
+    following: "337",
+    bio: "It's Classified\nMSIT 24",
+   // link: "https://linktr.ee/2002Bishwajeet",
+    link: "linkr.ee/2002Bishwajeet", 
+  )
 ];

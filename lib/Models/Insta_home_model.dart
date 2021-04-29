@@ -6,8 +6,7 @@ class Stories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var devicesize = MediaQuery.of(context).size;
-    return SizedBox(
-      height: devicesize.height * 0.815, //0.826 for redmi note 5 pro //0.815 for pixel 3a
+    return Expanded(
       child: ListView(
         scrollDirection: Axis.vertical,
         children: [

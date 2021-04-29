@@ -6,6 +6,12 @@ import 'package:instagram_clone/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class ChatPage extends StatefulWidget {
+  const ChatPage({
+    Key key,
+    @required this.controller,
+  }) : super(key: key);
+  final PageController controller;
+  
   @override
   _ChatPageState createState() => _ChatPageState();
 }
@@ -27,7 +33,13 @@ class _ChatPageState extends State<ChatPage>
         backgroundColor: context.cardColor,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
-          onPressed: () {},
+          onPressed: () {
+            if (widget.controller.hasClients) { //statefull mein widget. lagana zaroori pad jaata hai
+                      widget.controller.previousPage(
+                          duration: Duration(milliseconds: 400),
+                          curve: Curves.easeInOut);
+                    }
+          },
           splashRadius: 2,
         ),
         centerTitle: true,
@@ -96,37 +108,44 @@ class _ChatPageState extends State<ChatPage>
           ),
         ),
       ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
+      body: TabBarView(
+        controller: _tabController,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 8.0),
-            child: Container(
-              height: 40,
-              margin: EdgeInsets.fromLTRB(20, 2, 20, 0),
-              decoration: BoxDecoration(
-                color: context.canvasColor,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: TextField(
-                autocorrect: true,
-                cursorColor: Theme.of(context).canvasColor,
-                cursorHeight: 0,
-                decoration: InputDecoration(
-                    border: InputBorder.none,
-                    contentPadding: EdgeInsets.only(left: 10),
-                    hintText: "Search"),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          Column(
+          ListView(
+            shrinkWrap: true,
+            scrollDirection: Axis.vertical,
             children: [
-               ...chaadata.map((e) => ChatCapsule(e)).toList(),
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: Container(
+                  height: 40,
+                  margin: EdgeInsets.fromLTRB(20, 2, 20, 0),
+                  decoration: BoxDecoration(
+                    color: context.canvasColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: TextField(
+                    autocorrect: true,
+                    cursorColor: Theme.of(context).canvasColor,
+                    cursorHeight: 0,
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        contentPadding: EdgeInsets.only(left: 10),
+                        hintText: "Search"),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Column(
+                children: [
+                  ...chaadata.map((e) => ChatCapsule(e)).toList(),
+                ],
+              ),
             ],
           ),
+          Center(child: Text("Rooms"))
         ],
       ),
     );
@@ -152,7 +171,7 @@ class _ChatPageState extends State<ChatPage>
 class ChatCapsule extends StatelessWidget {
   final Chatdata chat;
 
-   ChatCapsule( this.chat);
+  ChatCapsule(this.chat);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -167,24 +186,33 @@ class ChatCapsule extends StatelessWidget {
                 radius: 28,
               ),
               Padding(
-                padding: const EdgeInsets.only(left:8.0),
+                padding: const EdgeInsets.only(left: 8.0),
                 child: Column(
                   //mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    
                     Padding(
-                      padding: const EdgeInsets.only(right:120.0),
-                      child: Text(this.chat.id,textAlign: TextAlign.left,),
+                      padding: const EdgeInsets.only(right: 120.0),
+                      child: Text(
+                        this.chat.id,
+                        textAlign: TextAlign.left,
+                      ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right:28.0),
-                      child: Text(this.chat.msg,style: TextStyle(color: Colors.grey.shade600),),
+                      padding: const EdgeInsets.only(right: 28.0),
+                      child: Text(
+                        this.chat.msg,
+                        style: TextStyle(color: Colors.grey.shade600),
+                      ),
                     ),
                   ],
                 ),
               ),
               Spacer(),
-              IconButton(icon: Icon(Icons.camera_alt_outlined), onPressed: () {},splashRadius: 2,)
+              IconButton(
+                icon: Icon(Icons.camera_alt_outlined),
+                onPressed: () {},
+                splashRadius: 2,
+              )
             ],
           ),
           SizedBox(

@@ -1,16 +1,16 @@
 # instagram_clone
 
-A new Flutter project.
+This Repo is an instagram made using Flutter
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run This Repo in your system make sure you have flutter and all the neccessary sdk components installed
 
-A few resources to get you started if this is your first Flutter project:
+- [Download and install flutter](https://flutter.dev/docs/get-started/install)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Fork this repo and enjoy
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+If you want to just run the app ,apk provided too
+
+If you like it Pls Star it 
+

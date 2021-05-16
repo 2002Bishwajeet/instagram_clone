@@ -6,7 +6,7 @@ import 'package:instagram_clone/pages/Home_Page.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-const _url = 'https://linktr.ee/2002Bishwajeet';
+const String _url = 'https://linktr.ee/2002Bishwajeet';
 
 void _launchURL() async =>
     await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
@@ -20,10 +20,11 @@ class _ProfilePageState extends State<ProfilePage>
     with SingleTickerProviderStateMixin {
   TabController _controller;
   @override
-  void initState() { 
+  void initState() {
     super.initState();
-     _controller = new TabController(length: 2, vsync: this, initialIndex: 0);
+    _controller = new TabController(length: 2, vsync: this, initialIndex: 0);
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,8 +48,50 @@ class _ProfilePageState extends State<ProfilePage>
             onPressed: () {},
             splashRadius: 2,
           ),
-          IconButton(icon: Icon(Icons.menu), onPressed: () {}, splashRadius: 2),
+          IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: () {
+                return Scaffold.of(context).openEndDrawer();
+              },
+              splashRadius: 2),
         ],
+      ),
+      endDrawer: Drawer(
+        child: Container(
+          child: ListView(
+            children: [
+              DrawerHeader(child: Text(profiledata[0].name)),
+              ListTile(
+                leading: Icon(FontAwesome.archive),
+                title: Text("Archive"),
+              ),
+              ListTile(
+                leading: Icon(FontAwesome.archive),
+                title: Text("Your Activity"),
+              ),
+              ListTile(
+                leading: Icon(FontAwesome.qrcode),
+                title: Text("QR Code"),
+              ),
+              ListTile(
+                leading: Icon(FontAwesome.save),
+                title: Text("Saved"),
+              ),
+              ListTile(
+                leading: Icon(FontAwesome.list),
+                title: Text("Close Friends"),
+              ),
+              ListTile(
+                leading: Icon(CupertinoIcons.person_add),
+                title: Text("Discover People"),
+              ),
+              ListTile(
+                leading: Icon(FontAwesome.heart),
+                title: Text("COVID-19 Information Center"),
+              ),
+            ],
+          ),
+        ),
       ),
       body: Container(
         child: Column(
@@ -133,9 +176,7 @@ class _ProfilePageState extends State<ProfilePage>
                 ],
               ),
             ),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10),
             Container(
               margin: EdgeInsets.fromLTRB(24, 0, 24, 4),
               decoration: BoxDecoration(
@@ -152,33 +193,34 @@ class _ProfilePageState extends State<ProfilePage>
             SizedBox(
               height: 10,
             ),
-            Expanded(
+            Flexible(
               child: ListView(
+                primary: true,
+                addRepaintBoundaries: false,
+                shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 children: [
                   ...profiledata2.map((e) => ProfileAvatar(e)).toList(),
                 ],
               ),
             ),
-            // TabBar(
-            //   controller: _controller,
-            //   tabs: [
-            //     Tab(
-            //   icon: Icon(Icons.grid_on_sharp),
-            // ),
-            //   Tab(
-            //   icon: Icon(CupertinoIcons.person_crop_square_fill),
-            // ),
-            //   ],
-            // ),
-            // TabBarView(
-            //   controller: _controller,
-            //   children: [
-            //     Text("Profile Pictures"),
-            //     Text("Tagged Pictures"),
-            //   ]
-              
+            // Expanded(
+            //   child: TabBar(
+            //     controller: _controller,
+            //     tabs: [
+            //       Tab(
+            //         icon: Icon(Icons.grid_on_sharp),
+            //       ),
+            //       Tab(
+            //         icon: Icon(CupertinoIcons.person_crop_square_fill),
+            //       ),
+            //     ],
             //   ),
+            // ),
+            // TabBarView(controller: _controller, children: [
+            //   Text("Profile Pictures"),
+            //   Text("Tagged Pictures"),
+            // ]),
           ],
         ),
       ),

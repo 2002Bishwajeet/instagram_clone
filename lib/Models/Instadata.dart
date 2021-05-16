@@ -58,6 +58,7 @@ List<User> dumdata = [
     image: 'assets/images/bruce.jpg',
   ),
 ];
+
 class ProfileStory {
   String userid;
   String image;
@@ -67,6 +68,7 @@ class ProfileStory {
     @required this.image,
   });
 }
+
 List<ProfileStory> profiledata2 = [
   ProfileStory(
     userid: 'App Dev',
@@ -92,7 +94,6 @@ List<ProfileStory> profiledata2 = [
     userid: 'Amritsar',
     image: 'assets/images/sp6.jpg',
   ),
-  
 ];
 
 List<Post> dummydata = [
@@ -226,17 +227,23 @@ class Name {
   String bio;
   String link;
 
-  Name({this.name, this.post, this.followers, this.following, this.bio,this.link});
+  Name(
+      {this.name,
+      this.post,
+      this.followers,
+      this.following,
+      this.bio,
+      this.link});
 }
 
 List<Name> profiledata = [
   Name(
     name: "Bishwajeet Parhi",
     post: "120",
-    followers: "393",
-    following: "337",
+    followers: "412",
+    following: "353",
     bio: "It's Classified\nMSIT 24",
-   // link: "https://linktr.ee/2002Bishwajeet",
-    link: "linkr.ee/2002Bishwajeet", 
+    // link: "https://linktr.ee/2002Bishwajeet",
+    link: "linkr.ee/2002Bishwajeet",
   )
 ];

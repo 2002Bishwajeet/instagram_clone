@@ -3,7 +3,6 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:instagram_clone/Models/Insta_home_model.dart';
 import 'package:instagram_clone/pages/Profile.dart';
 import 'package:instagram_clone/widgets/bottomnavbar.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 import 'Chat_Page.dart';
 

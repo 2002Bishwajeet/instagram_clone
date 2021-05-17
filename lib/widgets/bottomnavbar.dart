@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/pages/Home_Page.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class BottomNavBar extends StatelessWidget {
